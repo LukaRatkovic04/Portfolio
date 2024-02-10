@@ -1,0 +1,89 @@
+@media screen and (max-width: 1500px) {
+  #about .wrapper h3 {
+    font-size: 27px;
+    line-height: 50px;
+  }
+  #contact #contacts {
+    flex-direction: column;
+  }
+  #contact #contacts i {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 1100px) {
+  #about .wrapper h3 {
+    font-size: 24px;
+    line-height: 40px;
+  }
+  header #maintext h1 {
+    font-size: 2.5em;
+  }
+  header #maintext h2 {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 900px) {
+  #about .wrapper h3 {
+    font-size: 20px;
+  }
+  header {
+    flex-direction: column;
+  }
+  header .logo {
+    margin: 0 auto;
+    left: 0;
+  }
+  header nav {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 750px) {
+  #about .wrapper {
+    flex-direction: column;
+  }
+  #about .wrapper img {
+    margin-left: 0;
+    width: 60%;
+  }
+  #about .wrapper h3 {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  #projects .wrap {
+    flex-direction: column;
+    width: 100%;
+  }
+  #projects .wrap .project {
+    margin: 0 auto;
+    width: 70%;
+  }
+  #contact form input {
+    width: 96%;
+    margin-top: 20px;
+  }
+  #contact #contacts i {
+    font-size: 10px;
+  }
+  header #maintext h1 {
+    font-size: 2.5em;
+    line-height: 50px;
+  }
+  header #maintext h2 {
+    font-size: 1.5em;
+    line-height: 50px;
+  }
+}
+@media screen and (max-width: 600px) {
+  header nav ul a {
+    width: 50%;
+    text-align: center;
+  }
+  header nav ul a li {
+    margin-left: 0px;
+    padding-bottom: 15px;
+  }
+  #contact #contacts i {
+    font-size: 7px;
+  }
+}/*# sourceMappingURL=responsive.css.map */

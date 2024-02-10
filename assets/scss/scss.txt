@@ -1,0 +1,509 @@
+MAIN SCSS
+
+@import '_config.scss';
+
+html::-webkit-scrollbar{
+    width: 12px;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: $font-color;
+    border-radius: 30px;
+}
+html::-webkit-scrollbar-thumb:hover{
+    background-color: $font-color;
+}
+html::-webkit-scrollbar-track{
+    background-color: rgb(20, 20, 20);
+}
+
+body{
+    background-color: $primary-color;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/bckgd.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+
+    .logo{
+        height: 100px;
+        display: flex;
+        left: 10%;
+        position: relative;
+        align-items: center;
+        h1{
+            font-size: 45px;
+            font-weight: 600;
+
+            &:hover{
+                @include trans;
+                color: $font-color;
+            }
+        }
+
+        img{
+            width: 40px;
+            margin-top: 5px;
+            margin-left: 10px;
+        }
+    }
+
+    nav{
+        height: 100px;
+        display: flex;
+        align-items: center;
+        margin-left: auto; 
+        margin-right: 100px;
+    
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+    
+            li{
+                font-size: 1.33rem;
+                list-style: none;
+                margin-left: 50px;
+
+                &:hover{
+                    @include trans;
+                    color: $font-color;
+                }
+            }
+        }
+    }
+    #maintext{
+        position: absolute;
+        @include abcenter;
+        width: 100%;
+        line-height: 100px;
+        
+        h1{
+            color: $font-color;
+            font-size: 3.5em;
+            animation: a1 1.5s;
+        }
+        @keyframes a1 { 
+            from{opacity: 0;}
+            to{opacity: 1;}
+        }
+
+        h2{
+            color: white;
+            font-size: 2em;
+            animation: a1 1.5s;
+        }
+    }
+    #arrow{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        @include abcenter;
+        top: 90%;
+        
+        i{
+            color: $font-color;
+            font-size: 30px;
+        }
+    }
+}
+
+#about{
+    @include parts;
+
+    h2{
+        @include h2style;
+    }
+    .wrapper{
+        width: 70%;
+        @include flexSPB;
+        flex-wrap: row wrap;
+        margin: 0 auto;
+        margin-top: 7vh;
+        align-items: center;
+
+        img{
+            width: 30%;
+            margin-left: 15%;
+            border-radius: 5px;
+        }
+        h3{  
+            width: 60%;
+            font-size: 30px;
+            color: $font-color;
+            word-wrap: break-word;
+            margin-left: 10%;
+            line-height: 60px;
+            font-weight: 400;
+            span{
+                color: white;
+            }
+        }
+    }
+    #abouttext{
+        width: 70%;
+        margin: 0 auto;
+
+        p{
+            @include paragraph;
+        }
+    }
+}
+
+#skills{
+    @include parts;
+    background-color: $secondary-color;
+    padding: 1% 0 5% 0;
+
+    h2{
+        @include h2style;
+    }
+
+    ul{
+        width: 60%;
+        margin: 0 auto;
+        li{
+            list-style: none;
+            padding: 20px;
+
+            h3{
+                padding: 15px;
+            }
+        }
+        .bar{
+            background-color: rgb(30, 30, 30);
+            display: block;
+            height: 10px;
+            border-radius: 25px;
+
+            span{
+                position: absolute;
+                background-color: $font-color;
+                height: 10px;
+                float: left;
+                border-radius: 25px;
+            }
+            #html5{
+                width: 55%;
+            }
+            #css3{
+                width: 50%;
+            }
+            #sass{
+                width: 40%;
+            }
+            #js{
+                width: 20%;
+            }
+        }
+    }
+}
+
+#projects{
+    @include parts;
+
+    h2{
+        @include h2style;
+    }
+    p{
+        @include paragraph;
+        width: 70%;
+        margin: 0 auto;
+        padding: 3% 0;
+    }
+    .wrap{
+        width: 70%;
+        margin: 0 auto;
+        @include flexSPB;
+        text-align: center;
+        flex-wrap: wrap;
+
+        .project{
+            width: 50%;
+            padding-bottom: 5%;
+
+            img{
+                width: 100%;
+                padding: 5%;
+                border-radius: 25px;
+
+                &:hover{
+                    @include trans;
+                    transform: scale(1.02);
+                    transition-duration: 1s;
+                    filter: brightness(140%);
+                }
+            }
+            a{
+                font-size: 20px;
+
+                &:hover{
+                    @include trans;
+                    color: $font-color;
+                }
+            }
+        }
+    }
+}
+
+#contact{
+    width: 100%;
+    background-color: $secondary-color;
+    @include parts;
+    padding: 1% 0;
+
+    h2{
+        @include h2style;
+    }
+
+    form{
+        margin: 0 auto;
+        width: 70%;
+        @include flexSPA;
+        padding: 4% 0;
+
+        input{
+            width: 30%;
+            height: 40px;
+            @include formstyle;
+
+            &::placeholder{
+                color: white;
+            }
+        }
+        textarea{
+            width: 96.7%;
+            color: white;
+            margin: 0 auto;
+            margin-top: 30px;
+            @include formstyle;
+            padding-top: 20px;
+
+            &::placeholder{
+                color: white;
+            }
+        }
+        input[type=submit]{
+            margin: 0 auto;
+            margin-top: 30px;
+            padding: 0px;
+
+            &:hover{
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+
+    #contacts{
+        width: 70%;
+        margin: 0 auto;
+        @include flexSPA;
+        i{
+            display: flex;
+            text-align: center;
+            padding: 0 0 30px 0;
+        }
+    }
+}
+
+footer{
+    @include parts;
+    background-color: rgb(7, 7, 7);
+
+    #icons{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 10%;
+
+        i{
+            padding: 20px 20px;
+        }
+    }
+    p{
+        text-align: center;
+        font-size: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+
+CONFIG SCSS
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+$primary-color: #111111;
+$secondary-color: #0e0e0e;
+$font-color: rgb(0, 140, 255); //210 0 0
+
+@mixin trans {
+    transition: ease;
+    transition-duration: 0.7s;
+}
+
+@mixin abcenter {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+@mixin h2style {
+    text-align: center;
+    margin-top: 7vh;
+    font-size: 35px;
+}
+
+@mixin parts{
+    width: 100%;
+    color: white;
+    letter-spacing: 3px;
+}
+
+@mixin paragraph{
+    padding: 5% 0;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+}
+@mixin formstyle{
+    background-color: $secondary-color;
+    border-color: $font-color;
+    border-radius: 5px;
+    color: $font-color;
+    padding-left: 20px;
+    border: 1px solid;
+}
+
+@mixin flexSPA{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+@mixin flexSPB{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+RESPONSIVE SCSS
+
+@media screen and (max-width:1500px){
+    #about .wrapper h3{
+        font-size: 27px;
+        line-height: 50px;
+    }
+    #contact #contacts{
+        flex-direction: column;
+        i{
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (max-width:1100px){
+    #about .wrapper h3{
+        font-size: 24px;
+        line-height: 40px;
+    }
+    header #maintext{
+        h1{
+            font-size: 2.5em;
+        }
+        h2{
+            font-size: 1.5em;
+        }
+    }
+}
+
+@media screen and (max-width:900px){
+    #about .wrapper h3{
+        font-size: 20px;
+    }
+    header{
+        flex-direction: column;
+        .logo{
+            margin: 0 auto;
+            left: 0;
+        }
+        nav{
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #about .wrapper{
+        flex-direction: column;
+        img{
+            margin-left: 0;
+            width: 60%;
+        }
+        h3{
+            margin-left: 0;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    #projects .wrap{
+        flex-direction: column;
+        width: 100%;
+        .project{
+            margin: 0 auto;
+            width: 70%;
+        }
+    }
+    #contact {
+        form input{
+            width: 96%;
+            margin-top: 20px;
+        }
+        #contacts i{
+         font-size: 10px; 
+        }   
+    }
+    header #maintext{
+        h1{
+            font-size: 2.5em;
+            line-height: 50px;
+        }
+        h2{
+            font-size: 1.5em;
+            line-height: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    header nav ul a{
+        width: 50%;
+        text-align: center;
+        li{
+            margin-left: 0px;
+            padding-bottom: 15px;
+        }
+    }
+    #contact #contacts i{
+        font-size: 7px;    
+    }
+}

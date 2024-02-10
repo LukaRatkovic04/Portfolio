@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+$primary-color: #111111;
+$secondary-color: #0e0e0e;
+$font-color: rgb(0, 140, 255); //210 0 0
+
+@mixin trans {
+    transition: ease;
+    transition-duration: 0.7s;
+}
+
+@mixin abcenter {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+@mixin h2style {
+    text-align: center;
+    margin-top: 7vh;
+    font-size: 35px;
+}
+
+@mixin parts{
+    width: 100%;
+    color: white;
+    letter-spacing: 3px;
+}
+
+@mixin paragraph{
+    padding: 5% 0;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+}
+@mixin formstyle{
+    background-color: $secondary-color;
+    border-color: $font-color;
+    border-radius: 5px;
+    color: $font-color;
+    padding-left: 20px;
+    border: 1px solid;
+}
+
+@mixin flexSPA{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+@mixin flexSPB{
+    display: flex;
+    justify-content: space-between;
+}

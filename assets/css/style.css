@@ -1,0 +1,377 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+  width: 12px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 140, 255);
+  border-radius: 30px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(0, 140, 255);
+}
+
+html::-webkit-scrollbar-track {
+  background-color: rgb(20, 20, 20);
+}
+
+body {
+  background-color: #111111;
+  width: 100%;
+  font-family: "Raleway", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/bckgd.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+}
+header .logo {
+  height: 100px;
+  display: flex;
+  left: 10%;
+  position: relative;
+  align-items: center;
+}
+header .logo h1 {
+  font-size: 45px;
+  font-weight: 600;
+}
+header .logo h1:hover {
+  transition: ease;
+  transition-duration: 0.7s;
+  color: rgb(0, 140, 255);
+}
+header .logo img {
+  width: 40px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+header nav {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 100px;
+}
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+header nav ul li {
+  font-size: 1.33rem;
+  list-style: none;
+  margin-left: 50px;
+}
+header nav ul li:hover {
+  transition: ease;
+  transition-duration: 0.7s;
+  color: rgb(0, 140, 255);
+}
+header #maintext {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  line-height: 100px;
+}
+header #maintext h1 {
+  color: rgb(0, 140, 255);
+  font-size: 3.5em;
+  animation: a1 1.5s;
+}
+@keyframes a1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+header #maintext h2 {
+  color: white;
+  font-size: 2em;
+  animation: a1 1.5s;
+}
+header #arrow {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  top: 90%;
+}
+header #arrow i {
+  color: rgb(0, 140, 255);
+  font-size: 30px;
+}
+
+#about {
+  width: 100%;
+  color: white;
+  letter-spacing: 3px;
+}
+#about h2 {
+  text-align: center;
+  margin-top: 7vh;
+  font-size: 35px;
+}
+#about .wrapper {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: row wrap;
+  margin: 0 auto;
+  margin-top: 7vh;
+  align-items: center;
+}
+#about .wrapper img {
+  width: 30%;
+  margin-left: 15%;
+  border-radius: 5px;
+}
+#about .wrapper h3 {
+  width: 60%;
+  font-size: 30px;
+  color: rgb(0, 140, 255);
+  word-wrap: break-word;
+  margin-left: 10%;
+  line-height: 60px;
+  font-weight: 400;
+}
+#about .wrapper h3 span {
+  color: white;
+}
+#about #abouttext {
+  width: 70%;
+  margin: 0 auto;
+}
+#about #abouttext p {
+  padding: 5% 0;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+}
+
+#skills {
+  width: 100%;
+  color: white;
+  letter-spacing: 3px;
+  background-color: #0e0e0e;
+  padding: 1% 0 5% 0;
+}
+#skills h2 {
+  text-align: center;
+  margin-top: 7vh;
+  font-size: 35px;
+}
+#skills ul {
+  width: 60%;
+  margin: 0 auto;
+}
+#skills ul li {
+  list-style: none;
+  padding: 20px;
+}
+#skills ul li h3 {
+  padding: 15px;
+}
+#skills ul .bar {
+  background-color: rgb(30, 30, 30);
+  display: block;
+  height: 10px;
+  border-radius: 25px;
+}
+#skills ul .bar span {
+  position: absolute;
+  background-color: rgb(0, 140, 255);
+  height: 10px;
+  float: left;
+  border-radius: 25px;
+}
+#skills ul .bar #html5 {
+  width: 55%;
+}
+#skills ul .bar #css3 {
+  width: 50%;
+}
+#skills ul .bar #sass {
+  width: 40%;
+}
+#skills ul .bar #js {
+  width: 20%;
+}
+
+#projects {
+  width: 100%;
+  color: white;
+  letter-spacing: 3px;
+}
+#projects h2 {
+  text-align: center;
+  margin-top: 7vh;
+  font-size: 35px;
+}
+#projects p {
+  padding: 5% 0;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+  width: 70%;
+  margin: 0 auto;
+  padding: 3% 0;
+}
+#projects .wrap {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex-wrap: wrap;
+}
+#projects .wrap .project {
+  width: 50%;
+  padding-bottom: 5%;
+}
+#projects .wrap .project img {
+  width: 100%;
+  padding: 5%;
+  border-radius: 25px;
+}
+#projects .wrap .project img:hover {
+  transition: ease;
+  transition-duration: 0.7s;
+  transform: scale(1.02);
+  transition-duration: 1s;
+  filter: brightness(140%);
+}
+#projects .wrap .project a {
+  font-size: 20px;
+}
+#projects .wrap .project a:hover {
+  transition: ease;
+  transition-duration: 0.7s;
+  color: rgb(0, 140, 255);
+}
+
+#contact {
+  width: 100%;
+  background-color: #0e0e0e;
+  width: 100%;
+  color: white;
+  letter-spacing: 3px;
+  padding: 1% 0;
+}
+#contact h2 {
+  text-align: center;
+  margin-top: 7vh;
+  font-size: 35px;
+}
+#contact form {
+  margin: 0 auto;
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 4% 0;
+}
+#contact form input {
+  width: 30%;
+  height: 40px;
+  background-color: #0e0e0e;
+  border-color: rgb(0, 140, 255);
+  border-radius: 5px;
+  color: rgb(0, 140, 255);
+  padding-left: 20px;
+  border: 1px solid;
+}
+#contact form input::-moz-placeholder {
+  color: white;
+}
+#contact form input::placeholder {
+  color: white;
+}
+#contact form textarea {
+  width: 96.7%;
+  color: white;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: #0e0e0e;
+  border-color: rgb(0, 140, 255);
+  border-radius: 5px;
+  color: rgb(0, 140, 255);
+  padding-left: 20px;
+  border: 1px solid;
+  padding-top: 20px;
+}
+#contact form textarea::-moz-placeholder {
+  color: white;
+}
+#contact form textarea::placeholder {
+  color: white;
+}
+#contact form input[type=submit] {
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 0px;
+}
+#contact form input[type=submit]:hover {
+  color: white;
+  cursor: pointer;
+}
+#contact #contacts {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#contact #contacts i {
+  display: flex;
+  text-align: center;
+  padding: 0 0 30px 0;
+}
+
+footer {
+  width: 100%;
+  color: white;
+  letter-spacing: 3px;
+  background-color: rgb(7, 7, 7);
+}
+footer #icons {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 10%;
+}
+footer #icons i {
+  padding: 20px 20px;
+}
+footer p {
+  text-align: center;
+  font-size: 10px;
+  padding-bottom: 10px;
+}/*# sourceMappingURL=style.css.map */
